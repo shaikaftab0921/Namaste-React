@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
+import { AppLayout } from "./src/components/AppLayout";
 
-const heading=React.createElement('h1',{},'Namaste react ');
 const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(heading);
+root.render(<AppLayout/>);
