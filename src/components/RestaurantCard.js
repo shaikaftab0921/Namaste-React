@@ -13,8 +13,8 @@ export const RestaurantCard =  (restaurantList) => {
       } = restaurantList?.data;
 
       return (
-    <div id='card' className='flex-row flex-wrap m-5 p-5 h-1/4 w-1/4 border border-slate-950'>
-        <img alt='Restaurant Card' src={Cloudinary_key+`${cloudinaryImageId}`}  className='h-1/4 p-1 border border-black'/>
+    <div id='card' className='flex-row flex-wrap m-3 p-3 h-1/4 w-1/5 hover:shadow-2xl '>
+        <img alt='Restaurant Card' src={Cloudinary_key+`${cloudinaryImageId}`}  className='h-1/4  border'/>
         <h3 >{name}</h3>
         <h3>{avgRating} stars</h3>
         <h4>{cuisines.join(", ")}</h4>

@@ -1,10 +1,11 @@
 import React from 'react';
 
-export const Search = () => {
+export const Search = (props) => {
+  console.log(props);
   return (
-    <div className='bg-gray-500  flex flex-wrap '>
-        <input type="text" className='ml-2 border border-r-black' /> 
-        <button className='ml-4 bg-gray-600 border border-r-black'> Search</button>
+    <div className='bg-red-900 py-4  flex flex-wrap '>
+  <input class="placeholder:italic placeholder:text-slate-400 block bg-white  border border-slate-300 rounded-full py-2 pl-3 pr-3 ml-8 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>   
+  <button className='ml-4 bg-slate-300 rounded-full px-4 border border-r-black'> Search</button>
     </div>
   )
 }

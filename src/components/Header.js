@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Header = () => {
   return (
-    <div className='shadow-sm flex flex-wrap'>
+    <div className='shadow-xl mb-4 flex flex-wrap'>
        <img 
        className='w-24 h-24'
        alt="logo" 
