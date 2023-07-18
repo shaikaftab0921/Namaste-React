@@ -11,12 +11,5 @@ export const AppLayout = () => {
      <Body/>
      <Footer/>
     </div>
-  
-    /*
-        Header
-
-        Body
-        Footer
-    */
   )
 }
