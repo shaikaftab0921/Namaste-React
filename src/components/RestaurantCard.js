@@ -11,10 +11,9 @@ export const RestaurantCard =  (restaurantList) => {
         cloudinaryImageId,
         address,
       } = restaurantList?.data;
-
       return (
-    <div id='card' className='flex-row flex-wrap m-3 p-3 h-1/4 w-1/5 hover:shadow-2xl '>
-        <img alt='Restaurant Card' src={Cloudinary_key+`${cloudinaryImageId}`}  className='h-1/4  border'/>
+    <div  className='flex-row flex-wrap m-5 h-96 p-3 w-80 hover:shadow-2xl '>
+        <img alt='Restaurant Card' src={Cloudinary_key+`${cloudinaryImageId}`}/>
         <h3 >{name}</h3>
         <h3>{avgRating} stars</h3>
         <h4>{cuisines.join(", ")}</h4>

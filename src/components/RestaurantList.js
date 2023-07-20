@@ -10,11 +10,13 @@ export const RestaurantList = () => {
     {
       ([restaurantList,...args])=>{
         return (
-        <div className='flex flex-wrap '>
+        <div className='flex flex-wrap'>
         {restaurantList?
          restaurantList.map((restaurant,index)=>{
           return  (
-              <RestaurantCard key={index} {...restaurant}  />            
+            <Link to={`restaurant/${restaurant.data.id}`} key={index}>
+              <RestaurantCard key={index} {...restaurant}  />
+            </Link>                          
           )
          })
         
