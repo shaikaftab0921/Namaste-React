@@ -8,11 +8,11 @@ const ItemList = ({card:cards}=props) => {
   return (
     <div className='flex-row m-10'>
          <h1 className='font-extrabold shadow-lg'>{title}</h1>
-         <ul>
+         <ul className='border-l border-l-gray-400'>
             {
                 itemCards?
                 itemCards.map(({card})=><Item key={card.info.id} {...card.info} />)
-                :<h1>'No item'</h1>
+            : null
             }
          </ul>
     </div>

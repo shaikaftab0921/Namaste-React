@@ -1,6 +1,6 @@
 import React from 'react';
 import { Cloudinary_key } from '../constants/images';
-
+import { Link } from 'react-router-dom';
 export const RestaurantCard =  (restaurantList) => {
     const {
         name,
@@ -9,16 +9,21 @@ export const RestaurantCard =  (restaurantList) => {
         costForTwo,
         deliveryTime,
         cloudinaryImageId,
-        address,
+        id,
       } = restaurantList?.data;
-      return (
-    <div  className='flex-row flex-wrap m-5 h-96 p-3 w-80 hover:shadow-2xl '>
+  return (
+    <Link to={`restaurant/${id}`} key={id}>
+
+    <div  className='flex-row flex-wrap w-80 p-3 m-3 hover:shadow-2xl '>
         <img alt='Restaurant Card' src={Cloudinary_key+`${cloudinaryImageId}`}/>
-        <h3 >{name}</h3>
-        <h3>{avgRating} stars</h3>
-        <h4>{cuisines.join(", ")}</h4>
-        <h4>₹{costForTwo / 100} For Two</h4>
-        <h5>Deliver in {deliveryTime} Min</h5>
-    </div>
+        <span className='font-normal'>{name}</span>
+          <h4 className='my-4'>{cuisines.join(", ")}</h4>
+          <ul className='flex justify-between'>
+                <li className='bg-green-400 px-2 text-white'>⭑  {avgRating}</li>
+              <li className='text-gray-500' >{costForTwo / 100} For Two</li>
+              <li className='text-gray-500'>{deliveryTime} Mins</li>
+          </ul>
+      </div>
+    </Link>                          
   )
 }

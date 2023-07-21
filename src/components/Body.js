@@ -25,7 +25,7 @@ async function getRestaurantData(){
     <div className='flex-row '>
       <RestaurantContext.Provider value={[filteredRestaurant,restaurants,setFilteredRestaurant]} >
         <Search />
-        <RestaurantList />
+        <RestaurantList/>
       </RestaurantContext.Provider>
     </div>
   )

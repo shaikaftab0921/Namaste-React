@@ -4,6 +4,7 @@ import { AppLayout } from "./src/components/AppLayout";
 import { createBrowserRouter , RouterProvider } from 'react-router-dom';
 import { RestaurantMenu } from "./src/components/RestaurantMenu";
 import { Body } from "./src/components/Body";
+import Cart from "./src/components/Cart";
 
 const AppRouter=createBrowserRouter([
     {
@@ -21,8 +22,12 @@ const AppRouter=createBrowserRouter([
         ]
     },
     {
-        path:'restaurant',
+        path:'/restaurant/:resId',
         element: <RestaurantMenu/>,
+    },
+    {
+        path:'/cart',
+        element: <Cart/>,
     }
 
     

@@ -31,7 +31,7 @@ export const Search = ( props) => {
           onClick={()=>{
             setFilteredRestaurant(getFilteredRestaurant(searchText,restaurants));
           }}
-          className='ml-4 bg-slate-300 rounded-full px-4 border border-r-black'
+          className='ml-4 bg-slate-300 rounded-full px-4 border border-black'
           > Search
           </button>    
           </div> 

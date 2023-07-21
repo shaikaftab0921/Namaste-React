@@ -8,15 +8,13 @@ export const RestaurantList = () => {
   return (
     <RestaurantContext.Consumer>
     {
-      ([restaurantList,...args])=>{
+      ([restaurantList,...args     ])=>{
         return (
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap justify-between '>
         {restaurantList?
          restaurantList.map((restaurant,index)=>{
           return  (
-            <Link to={`restaurant/${restaurant.data.id}`} key={index}>
-              <RestaurantCard key={index} {...restaurant}  />
-            </Link>                          
+              <RestaurantCard key={restaurant.data.id} {...restaurant}  />
           )
          })
         
