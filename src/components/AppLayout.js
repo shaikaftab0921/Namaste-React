@@ -6,13 +6,13 @@ import { Provider } from 'react-redux'
 import store from '../utils/store'
 
 
-export const AppLayout = () => {
+export default AppLayout = () => {
   return (
     <div>
     <Provider store={store}>
-    <Header/>
-    <Outlet/>
-     <Footer/>  
+          <Header/>
+          <Outlet/>
+          <Footer/>  
     </Provider>  
    
     </div>

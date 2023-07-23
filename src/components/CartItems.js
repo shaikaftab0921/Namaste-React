@@ -13,12 +13,12 @@ const CartItems = () => {
     </div>   
     {
       // console.log('cartItems',cartItems)
-    cartItems?cartItems.map(({name,price,description,id})=>{
+    cartItems?cartItems.map(({name,price,id,count})=>{
        return (
         <ul key={id} className='flex  p-10 justify-between  '>
             <li>{name}</li>
             <li >  ₹ {price/100}</li>
-            <li className='font-thin  text-s'>1</li>
+            <li className='font-thin  text-s'>{count}</li>
       </ul>
        )
     }):null
